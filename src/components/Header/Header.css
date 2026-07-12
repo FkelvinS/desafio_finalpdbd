@@ -1,0 +1,34 @@
+.header {
+  background-color: #1e293b;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 40px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 28px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+}
+
+.menu li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    color: #38bdf8;
+}
