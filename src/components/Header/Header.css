@@ -32,3 +32,14 @@
 .menu li:hover {
     color: #38bdf8;
 }
+
+.menu a,
+.menu span {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover,
+.menu span:hover {
+  color: #38bdf8;
+}

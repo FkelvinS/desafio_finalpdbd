@@ -103,3 +103,37 @@
     font-size: 24px;
   }
 }
+
+.add-to-cart-button {
+  width: fit-content;
+  margin-top: 20px;
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #1e293b;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #334155;
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 22px;
+}
+
+.error-message {
+  color: #dc2626;
+  font-weight: bold;
+}

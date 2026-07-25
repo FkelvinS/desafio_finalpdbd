@@ -7,13 +7,31 @@ function Home() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
-
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => response.json())
-      .then((data) => {
+    async function fetchProducts() {
+      try {
+        const response = await fetch(
+        "https://fakestoreapi.com/products"
+    );
+
+        if (!response.ok) {
+          throw new Error("Não foi possível carregar os produtos.");
+        }
+
+        const data = await response.json();
+
         setProducts(data);
-      });
+      } catch (error) {
+        setError("Não foi possível carregar os produtos.");
+      } finally {
+        setLoading(false);
+      }
+}
+
+    fetchProducts();
 
     fetch("https://fakestoreapi.com/products/categories")
       .then((response) => response.json())
@@ -22,12 +40,22 @@ function Home() {
       });
   }, []);
 
-  if (products.length === 0) {
+  if (loading) {
   return (
     <>
       <Header />
       <main>
         <h2>Carregando produtos...</h2>
+      </main>
+    </>
+  );
+}
+  if (error) {
+  return (
+    <>
+      <Header />
+      <main>
+        <h2>{error}</h2>
       </main>
     </>
   );
@@ -38,7 +66,7 @@ function Home() {
       ? products
       : products.filter(
           (product) => product.category === selectedCategory
-      );
+      );    
   return (
     <>
       <Header />
