@@ -1,24 +1,44 @@
 # 🛍️ Catálogo de Produtos
 
-Projeto desenvolvido como parte do **Desafio Frontend** utilizando **React** e **Vite**.
+Projeto desenvolvido como parte do Desafio Frontend, utilizando React e Vite.
 
-O objetivo da aplicação é consumir a **Fake Store API** e exibir um catálogo de produtos de forma organizada e responsiva.
+A aplicação consome a Fake Store API para exibir um catálogo de produtos com filtros, página de detalhes e carrinho de compras.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Funcionalidades
+
+- Exibição de produtos consumidos da Fake Store API
+- Filtro de produtos por categoria
+- Página de detalhes de cada produto
+- Navegação entre páginas com React Router
+- Adição e remoção de produtos no carrinho
+- Aumento e redução da quantidade dos produtos
+- Cálculo automático do valor total da compra
+- Botão para limpar o carrinho
+- Contador de itens no Header
+- Persistência do carrinho com `localStorage`
+- Mensagens de carregamento e tratamento de erros da API
+- Layout responsivo
+
+---
+
+## Tecnologias utilizadas
 
 - React
 - Vite
 - JavaScript
 - CSS
+- React Router DOM
+- Context API
 - Fetch API
+- LocalStorage
 
 ---
 
-## 🌐 API Utilizada
+## API utilizada
 
-Fake Store API
+A aplicação utiliza a **Fake Store API**:
 
 https://fakestoreapi.com/
 
@@ -50,21 +70,19 @@ npm install
 npm run dev
 ```
 
-Após iniciar, abra o endereço informado no terminal (normalmente):
+Depois, abra no navegador o endereço mostrado no terminal, normalmente:
 
-```
+```text
 http://localhost:5173
-```
-
----
+    ```
 
 ## 📸 Preview
 
-Na Sprint 1, a aplicação exibe um catálogo de produtos consumidos da Fake Store API em um layout responsivo.
+A aplicação apresenta um catálogo responsivo, com navegação para os detalhes dos produtos e gerenciamento completo do carrinho de compras.
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 Fernando Santos
 
